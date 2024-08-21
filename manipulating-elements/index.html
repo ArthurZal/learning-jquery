@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning jQuery</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime id recusandae accusamus dolore eum dolorum placeat sed velit, exercitationem illo quam, enim dolor reprehenderit ex officia! Nobis animi laboriosam hic.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In architecto modi totam error quasi magni numquam a sequi doloremque quisquam ab, harum corrupti exercitationem dignissimos, alias qui repellendus ipsam suscipit?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias nam voluptatem voluptates obcaecati inventore at placeat molestias dignissimos enim eum dolor, labore illum aut optio sed eaque sint doloremque quis.</p>
+
+    <script src="/jquery-3.7.1.js"></script>
+    <script>
+        
+        $('p').first().html("Esse texto sobrescreve o inicial") //sobrescrevendo o texto do primeiro parágrafo
+
+        $('p').first().append(" // Esse texto é adicionado ao final do novo texto") //adicionando um novo conteúdo ao conteúdo já existente 
+
+        $('p').last().html($('p').last().html() + 'Esse texto é adicionado ao final do texto existente') 
+
+    </script>
+</body>
+</html>
