@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning jQuery</title>
+</head>
+<body>
+    <p id="text-paragraph">Texto do parágrafo</p>
+    <ul>
+        <li class="list-item">Primeiro item</li>
+        <li class="list-item">Segundo item</li>
+        <li class="list-item">Terceiro item</li>
+    </ul>
+    <script src="/jquery-3.7.1.js"></script>
+    <script>
+        console.log($("#text-paragraph").html()) //Selecting the paragraph element from the document
+        console.log($(".list-item").eq(1).html()) //Selecting the second list item based on the index value
+    </script>
+</body>
+</html>
