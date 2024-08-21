@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning jQuery</title>
+</head>
+<body>
+    <h1>Lista de itens</h1>
+    <h2>Estes são os elementos presentes na Lista</h2>
+    <ul id="list_container">
+        <li>Primeiro item</li>
+        <li>Segundo item</li>
+        <li>Terceiro item</li>
+    </ul>
+    <script src="/jquery-3.7.1.js"></script>
+    
+    <script>
+
+        $('#list_container').append('<li>Quarto item</li>'); //adicionando um novo item ao final da ul
+
+        $('h1,h2').after('<p>Texto do parágrafo inserido após cada tag h1 e h2</p>'); //adicionando um parágrafo após cada tag
+
+        $('#list_container').before('<h3>Subtítulo da lista</h3>'); //adicionando uma subtítulo antes da lista
+
+        $('li').eq(3).remove() //removendo o quarto li criando anteriormente
+        
+    </script>
+</body>
+</html>
