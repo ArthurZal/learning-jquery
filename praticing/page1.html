@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página1</title>
+    <script src="/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <h1>Meu título da primeira página</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, labore magnam. Totam earum quae accusantium consequatur eos cumque sapiente, asperiores aut, vitae, maiores commodi! Explicabo quas obcaecati eum mollitia neque!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, labore magnam. Totam earum quae accusantium consequatur eos cumque sapiente, asperiores aut, vitae, maiores commodi! Explicabo quas obcaecati eum mollitia neque!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, labore magnam. Totam earum quae accusantium consequatur eos cumque sapiente, asperiores aut, vitae, maiores commodi! Explicabo quas obcaecati eum mollitia neque!</p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolorum ducimus, quisquam quo facilis rem odit facere tempore nam a. Sint corrupti architecto, vitae quidem sunt perferendis assumenda laboriosam accusantium!</p>
+    </div>
+
+    <script>
+
+        $('div').append("<a id='link_alerta' href='pagina.html'>Exibir alerta</a>") 
+    
+        $('a').click(function(event) {
+            event.preventDefault();
+
+            alert('O novo link inserido com jQuery, foi clickado')
+        })
+
+    </script>
+
+</body>
+</html>
