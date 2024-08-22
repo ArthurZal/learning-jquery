@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learning jQuery</title>
-    <script src="jquery-3.7.1.js"></script>
 </head>
 <body>
+    <script src="/jquery-3.7.1.js"></script>
     <script>
-        
+
+        $(function() {
+            alert('evento disparado')
+        })
+
+        $(document).ready(function() {
+    // Código aqui será executado quando o DOM estiver pronto
+        });
+
+
     </script>
 </body>
 </html>

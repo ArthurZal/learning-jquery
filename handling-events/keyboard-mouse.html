@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning jQuery</title>
+    <script src="/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        </ul>
+
+        <form>
+            <input type="text" name="inpt" id="inpt" />
+        </form>
+    <script>
+        
+        //Evento mouseover
+        $('ul').on('mouseover', 'li', function () {
+            console.log('Conteúdo do item da lista: ' + $(this).text());
+        });
+
+        //Evento mouseleave
+        $('ul').on('mouseleave', 'li', function () {
+            console.log('O mouse não está mais sobre o elemento da lista')
+        });
+
+        //Evento keypress
+        $('#inpt').keypress(function (event) {
+            event.preventDefault();
+            console.log('A tecla pressionada foi: ' + event.which);
+        });
+
+    </script>
+</body>
+</html>
