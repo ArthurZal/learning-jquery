@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script src="/jquery-3.7.1.js"></script>
+</head>
+<body>
+    
+    <p>
+        <a id="lnk" href="javascript:void(0);">Executar a requisição AJAX</a>
+    </p>
+    <div id="resultado"></div>
+    
+    <script>
+
+        $('#lnk').click(function () {
+            $.ajax({
+                url: "https://reqres.in/api/users",
+                type: 'post',
+                data: {
+                        name: "Arthur Oliver",
+                        movies: ["TOC TOC", "Barbarian"]
+                },
+                beforeSend: function () {
+                    $("#resultado").html("Loading...");
+                }
+            })
+            .done(function (msg) {
+                var content = '';
+            $.each(msg["movies[]"], function (index, value) {
+                content += value + ' - ';
+            });
+            $("#resultado").html('Nome: ' + msg.name + '<br/>' + 'Filmes: ' + content + '<br/>' + 'Id: ' + msg.id + '<br/>' + 'Data de Criação: ' + msg.createdAt);
+            })
+            .fail(function (jqXHR, textStatus, msg) {
+        
+                console.log('A requisição falhou e retornou com a seguinte mensagem: ' + msg);
+            });
+        });
+
+    </script>
+</body>
+</html>
